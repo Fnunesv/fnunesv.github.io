@@ -11,10 +11,10 @@ I study how cells regulate their mechanical properties — how they sense physic
 
 The central question in the lab is how membrane tension and cortical actin mechanics shape cell behaviour. My main contributions:
 
-- **Optogenetic actin crosslinkers** — I designed six CRY2/iLID-based synthetic crosslinkers with scalable molecular lengths (10–50 nm), enabling light-controlled, nanometric tuning of actin network spacing in live cells.
-- **High-throughput imaging workflows** — Three ML-driven pipelines for automated segmentation, tracking, and classification of cytoskeletal dynamics across hundreds of cells per experiment.
+- **Optogenetic actin crosslinkers** — I designed six CRY2/iLID-based synthetic crosslinkers with scalable molecular lengths, enabling light-controlled, nanometric control of actin crosslinking cells.
+- **High-throughput imaging workflows** — Three ML-driven pipelines for automated segmentation, tracking, and classification of cytoskeletal dynamics.
 - **Magnetic bead rheology** — A coupled optogenetics + magnetic bead assay to measure cell material properties with nanometric precision and ~1 s time resolution.
-- **3D epithelial cysts** — Long-term culture and imaging of MDCK multicellular cysts to study how mechanical constraints shape epithelial morphogenesis.
+- **Spectrin in cell surface mechanics** - EMBO and JHS-funded project on the role of membrane skeletal protein spectrin in cell surface mechanics.
 
 ---
 
@@ -23,7 +23,7 @@ The central question in the lab is how membrane tension and cortical actin mecha
 <div class="research-period">PhD</div>
 <div class="research-institution">Bordeaux, France</div>
 
-My PhD focused on how cells physically sense and respond to mechanical stretch — and what happens at the molecular level when you pull on them.
+My PhD focused on how cells physically sense and respond to mechanical stretch at the molecular level. 
 
 - **Cell stretching device** — Built the first device combining single and cyclic cell stretching with super-resolution microscopy (PALM/STORM/DNA-PAINT) and single-particle tracking. Microfabricated in PDMS, 3D-printed, designed to maintain sterility during live imaging.
 - **Mechanosensing in fibroblasts** — Used the device to show that cell stretch is amplified by active actin remodelling, deforming and recruiting proteins at focal adhesions ([Nature Cell Biology, 2020](https://doi.org/10.1038/s41556-020-0548-2)).
