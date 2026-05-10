@@ -1,0 +1,49 @@
+baseURL = "https://fnunesv.github.io/"
+locale = "en-us"
+title = "Filipe Nunes Vicente"
+enableRobotsTXT = true
+
+[params]
+  name        = "Filipe Nunes Vicente"
+  role        = "Research Scientist · Cell Biology & Imaging"
+  institution = "EMBL Heidelberg"
+  email       = "filipenunesvicente1@gmail.com"
+  orcid       = "0000-0001-5107-0461"
+  github      = "fnunesv"
+  linkedin    = "filipe-nunes-vicente"
+  description = "Cell biologist and biophysicist at EMBL Heidelberg. I develop synthetic molecular tools to study cellular mechanics and build high-throughput imaging workflows."
+
+[menu]
+  [[menu.main]]
+    name   = "Research"
+    url    = "/research/"
+    weight = 1
+  [[menu.main]]
+    name   = "Publications"
+    url    = "/publications/"
+    weight = 2
+  [[menu.main]]
+    name   = "Projects"
+    url    = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name   = "Gallery"
+    url    = "/gallery/"
+    weight = 4
+  [[menu.main]]
+    name   = "Notes"
+    url    = "/notes/"
+    weight = 5
+  [[menu.main]]
+    name   = "CV"
+    url    = "/files/cv.pdf"
+    weight = 6
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 7
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <h1>Gallery</h1>
+  <p>Fluorescence microscopy images from my research.</p>
+</div>
+
+{{ if hugo.Data.gallery }}
+<div class="gallery-grid">
+  {{ range hugo.Data.gallery }}
+  <figure>
+    <img src="{{ .src }}" alt="{{ .caption }}">
+  </figure>
+  {{ end }}
+</div>
+{{ else }}
+<div class="gallery-grid">
+  <div class="gallery-placeholder">Microscopy images coming soon</div>
+  <div class="gallery-placeholder">Super-resolution actin</div>
+  <div class="gallery-placeholder">MDCK cysts</div>
+  <div class="gallery-placeholder">Single-particle tracking</div>
+</div>
+<p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1.5rem;">
+  To add images: place files in <code>static/img/gallery/</code> and add entries to <code>data/gallery.yaml</code>.
+</p>
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <img src="/img/profile.jpg" alt="{{ .Site.Params.name }}" class="hero-img">
+  <div class="hero-text">
+    <h1>{{ .Site.Params.name }}</h1>
+    <p class="hero-subtitle">{{ .Site.Params.role }} · {{ .Site.Params.institution }}</p>
+    <div class="hero-bio">
+      {{ .Content }}
+    </div>
+    <div class="social-links">
+      <a href="mailto:{{ .Site.Params.email }}" class="social-link">✉ Email</a>
+      <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" class="social-link">ORCID</a>
+      <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" class="social-link">GitHub</a>
+      <a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="social-link">LinkedIn</a>
+      <a href="/files/cv.pdf" target="_blank" class="social-link">↓ CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Publications -->
+<section class="home-section">
+  <h2>Selected Publications</h2>
+  {{ range first 3 hugo.Data.publications }}
+  <div class="pub-item">
+    <div class="pub-title">{{ .title }}</div>
+    <div class="pub-venue">
+      {{ if .journal }}{{ .journal }}{{ end }}
+      {{ if .year }}&middot; {{ .year }}{{ end }}
+    </div>
+    {{ if .doi }}
+    <div class="pub-links">
+      <a href="https://doi.org/{{ .doi }}" class="pub-link" target="_blank">DOI</a>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  <a href="/publications/" class="view-all">All publications →</a>
+</section>
+
+<!-- Research snapshot -->
+<section class="home-section">
+  <h2>Research</h2>
+  <p>I combine <strong>optogenetics</strong>, <strong>super-resolution microscopy</strong>, and <strong>quantitative image analysis</strong> to understand how cells regulate their mechanics. Currently at EMBL Heidelberg, I design synthetic actin crosslinkers and high-throughput imaging workflows to probe cytoskeletal organisation at the nanoscale.</p>
+  <a href="/research/" class="view-all">More about my research →</a>
+</section>
+
+<!-- Notes preview -->
+<section class="home-section">
+  <h2>Notes</h2>
+  {{ $notes := where .Site.RegularPages "Section" "notes" }}
+  {{ if $notes }}
+  <ul class="note-list">
+    {{ range first 3 $notes }}
+    <li class="note-item">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="note-date">{{ .Date.Format "Jan 2006" }}</span>
+    </li>
+    {{ end }}
+  </ul>
+  <a href="/notes/" class="view-all">All notes →</a>
+  {{ else }}
+  <p style="color: var(--text-muted); font-size: 0.9rem;">Notes and thoughts coming soon.</p>
+  {{ end }}
+</section>
+
+{{ end }}

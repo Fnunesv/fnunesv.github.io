@@ -1,0 +1,10 @@
+<nav class="site-nav">
+  <div class="container">
+    <a href="/" class="nav-name">{{ .Site.Params.name }}</a>
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

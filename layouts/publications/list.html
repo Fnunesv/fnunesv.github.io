@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <h1>Publications</h1>
+  <p>List fetched from <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank">ORCID</a>.
+  For PDFs of articles behind a paywall, <a href="mailto:{{ .Site.Params.email }}">email me</a> or check for a preprint via the DOI link.</p>
+</div>
+
+{{ range hugo.Data.publications }}
+<div class="pub-item">
+  <div class="pub-title">{{ .title }}</div>
+  <div class="pub-venue">
+    {{ if .journal }}{{ .journal }}{{ end }}
+    {{ if .year }}&middot; {{ .year }}{{ end }}
+    {{ if eq .type "preprint" }}<span style="font-size:0.75rem; color:var(--accent); font-style:normal; font-weight:600; margin-left:0.3rem;">preprint</span>{{ end }}
+  </div>
+  {{ if .doi }}
+  <div class="pub-links">
+    <a href="https://doi.org/{{ .doi }}" class="pub-link" target="_blank">DOI</a>
+    <a href="mailto:{{ $.Site.Params.email }}?subject=PDF request: {{ .title }}" class="pub-link">Request PDF</a>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<p>No publications found. Run <code>python3 scripts/fetch_orcid.py</code> to refresh.</p>
+{{ end }}
+
+{{ end }}

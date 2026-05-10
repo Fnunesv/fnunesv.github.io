@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <h1>Projects</h1>
+  <p>Published work and open-source tools.</p>
+</div>
+
+<section class="home-section">
+  <h2>Research Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Cell Stretching Device</h3>
+      <p>Custom microfabricated and 3D-printed device combining single and cyclic cell stretching with super-resolution microscopy and single-particle tracking. Used to show how cells amplify mechanical forces through active actin remodelling.</p>
+      <span class="project-tag">Microfabrication</span>
+      <span class="project-tag">Super-resolution</span>
+      <span class="project-tag">Mechanobiology</span>
+      <br>
+      <div class="pub-links" style="margin-top: 0.75rem;">
+        <a href="https://doi.org/10.1038/s41556-020-0548-2" class="pub-link" target="_blank">Nature Cell Biology 2020</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <h2>Code & Repositories</h2>
+  <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Open-source analysis pipelines and tools from my research. More repositories coming soon.</p>
+  <div class="repo-grid">
+    {{ range hugo.Data.repos }}
+    <div class="repo-card">
+      <h3><a href="{{ .url }}" target="_blank">{{ .name }}</a></h3>
+      <p>{{ .description }}</p>
+      <div class="repo-lang">
+        <span class="lang-dot" style="background: {{ .lang_color }};"></span>
+        {{ .language }}
+      </div>
+    </div>
+    {{ else }}
+    <div class="repo-card" style="border-style: dashed;">
+      <h3>Repositories coming soon</h3>
+      <p>Image analysis pipelines, optogenetics tools, and more.</p>
+      <div class="repo-lang">
+        <a href="https://github.com/{{ $.Site.Params.github }}" target="_blank" style="font-size: 0.82rem;">github.com/{{ $.Site.Params.github }}</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

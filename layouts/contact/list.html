@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="page-header">
+  <h1>Contact</h1>
+  <p>Feel free to reach out about research, collaborations, or just to say hello.</p>
+</div>
+
+<div class="contact-grid">
+  <div class="contact-item">
+    <span class="contact-label">Email</span>
+    <span class="contact-value"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="contact-label">ORCID</span>
+    <span class="contact-value"><a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank">{{ .Site.Params.orcid }}</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="contact-label">GitHub</span>
+    <span class="contact-value"><a href="https://github.com/{{ .Site.Params.github }}" target="_blank">github.com/{{ .Site.Params.github }}</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="contact-label">LinkedIn</span>
+    <span class="contact-value"><a href="https://linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">linkedin.com/in/{{ .Site.Params.linkedin }}</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="contact-label">Location</span>
+    <span class="contact-value">EMBL Heidelberg, Germany</span>
+  </div>
+</div>
+
+{{ .Content }}
+
+{{ end }}
