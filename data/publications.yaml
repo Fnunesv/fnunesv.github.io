@@ -14,12 +14,35 @@
   journal: Nature Materials
   doi: 10.1038/s41563-023-01578-1
   type: journal-article
+- title: Novel imaging methods and force probes for molecular mechanobiology of cytoskeleton
+    and adhesion
+  year: '2023'
+  journal: Trends in Cell Biology
+  doi: 10.1016/j.tcb.2022.07.008
+  type: journal-article
+- title: 'Order from chaos: How mechanics shape epithelia and promote self-organization'
+  year: '2023'
+  journal: Current Opinion in Systems Biology
+  doi: 10.1016/j.coisb.2023.100446
+  type: journal-article
 - title: Molecular organization and mechanics of single vimentin filaments revealed
     by super-resolution imaging.
   year: '2022'
   journal: Science advances
   doi: 10.1126/sciadv.abm2696
   type: journal-article
+- title: Single-Protein Tracking to Study Protein Interactions During Integrin-Based
+    Migration
+  year: '2021'
+  journal: Methods in Molecular Biology
+  doi: 10.1007/978-1-0716-0962-0_8
+  type: book-chapter
+- title: A micromechanical cell stretching device compatible with super-resolution
+    microscopy and single protein tracking
+  year: '2020'
+  journal: ''
+  doi: 10.21203/rs.3.pex-961/v1
+  type: preprint
 - title: Cell stretching is amplified by active actin remodelling to deform and recruit
     proteins in mechanosensitive structures.
   year: '2020'
